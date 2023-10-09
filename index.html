@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+  <main>
+    <header id="header">
+      <h1>JavaScriptQuiz</h1>
+      <h2 class="direct">Click on the button to start quiz!</h2>
+      <hr />
+      <button class="start-button">Start</button>
+    </header>
+
+    <section>
+      <div class="questions hide">
+      </div>
+
+      <h3 id="answer-feedback"></h3>
+
+      <div id="highscore" class="hide">
+        <h2 class="high-title" id="highcore-title">Here is your high score!</h2>
+        <h3 id="scoreboard">Time:</h3>
+        <h2 id="correct-answers">correct:</span> </h2>
+        <label for="initials">Initials</label>
+        <input id="initials" type="text">
+        <button id="btn">submit</button>
+      </div>
+
+      <div class="card-timer">
+        <div class="timer-text">
+          <h3>seconds remaining: <span class="timer-count"></span></h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
