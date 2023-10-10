@@ -43,7 +43,7 @@ var questions = [
     correct: "1995"
   },
   {
-    question: "which HTML element do we put the JavaScript? ?",
+    question: "which HTML element do we put the JavaScript?S",
     answers: [ "<script>", "<js>", "<script.js>", "<java>" ],
     correct: "<script>"
   },
