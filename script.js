@@ -98,7 +98,7 @@ questionArea.style.display = "block"
 
 
 function answerIsCorrect(){
-  correctAnswers.textContent = "correct:" + correctAns + "/10";
+  correctAnswers.textContent = "correct:" + correctAns + "/4";
   
   
 }
