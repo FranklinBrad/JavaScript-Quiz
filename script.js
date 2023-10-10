@@ -19,6 +19,7 @@ var scoreBoardEl = document.querySelector("#scoreboard")
 var correctAnswers = document.querySelector("#correct-answers")
 var timerContainer = document.querySelector(".card-timer")
 
+var penalty = 10;
 var timerSec = 60;
 var currQuestionIdx = 0;
 
@@ -38,6 +39,16 @@ var questions = [
     question: "What is the best baseball team?",
     answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
     correct: "aaaa"
+  },
+  {
+    question: "What is the best baskteball?",
+    answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
+    correct: "bbbb"
+  },
+  {
+    question: "What is the best golf?",
+    answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
+    correct: "cccc"
   },
   
 ]
@@ -85,11 +96,13 @@ questionArea.style.display = "block"
 
 
 function answerIsCorrect(){
-
+  correctAnswers.textContent = "correct:" + correctAns + "/10";
+  
   
 }
 
 function answerIsWrong(){
+  timerSec = timerSec - penalty;
 
 
 
@@ -105,7 +118,7 @@ questionArea.addEventListener("click", function(event){
     questionArea.style.display = "none"
     highScoreContainer.style.display = "block";
     scoreBoardEl.textContent = "Time: " + timerSec;
-    correctAnswers.textContent = "correct:" + correctAns + "/10";
+    
     timerContainer.style.display = "none";
     clearInterval(timerInterval);
  // } if (currQuestionIdx === questions.correct) {
@@ -120,7 +133,7 @@ questionArea.addEventListener("click", function(event){
          console.log(correctAns)
         answerIsCorrect()
         } else {
-           
+        answerIsWrong()
            }
         
           }
