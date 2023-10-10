@@ -18,6 +18,8 @@ var headerContainer = document.querySelector("#header")
 var scoreBoardEl = document.querySelector("#scoreboard")
 var correctAnswers = document.querySelector("#correct-answers")
 var timerContainer = document.querySelector(".card-timer")
+var initialsBox = document.querySelector(".initials")
+
 
 var penalty = 10;
 var timerSec = 60;
@@ -31,24 +33,24 @@ var incorect = 0
 
 var questions = [
   {
-    question: "What is the best football team?",
-    answers: [ "Green Bay Packers", "Chicago Bears", "Minnesota Vikings", "Detroit Lions" ],
-    correct: "Minnesota Vikings"
+    question: "Do you make items apear in the console?",
+    answers: [ "get.item", "go to console", "console.log", "console-log" ],
+    correct: "console.log"
   },
   {
-    question: "What is the best baseball team?",
-    answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
-    correct: "aaaa"
+    question: "When was javaScript created?",
+    answers: [ "2001", "2005", "1996", "1995" ],
+    correct: "1995"
   },
   {
-    question: "What is the best baskteball?",
-    answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
-    correct: "bbbb"
+    question: "which HTML element do we put the JavaScript? ?",
+    answers: [ "<script>", "<js>", "<script.js>", "<java>" ],
+    correct: "<script>"
   },
   {
-    question: "What is the best golf?",
-    answers: [ "aaaa", "bbbb", "cccc", "dddd" ],
-    correct: "cccc"
+    question: "How do you create a function in JavaScript??",
+    answers: [ "function=myFunction", "function:myfunsction", "function myFunction()", "myFunction =" ],
+    correct: "function myFunction()"
   },
   
 ]
@@ -138,6 +140,20 @@ questionArea.addEventListener("click", function(event){
         
           }
         displayQuestion()
+        localStorage.setItem("highScoreContainer", highScoreContainer);
+        localStorage.setItem("correctAnswers", correctAnswers);
+        localStorage.setItem("initialsBox", initialsBox);
 })
+
+function renderLastRegistered(){
+  var highscore = localStorage.getItem("highScoreContainer");
+  var correctLast = localStorage.getItem("correctAnswers");
+  var initialaLast = localStorage.getItem("initialsBox");
+
+
+
+
+}
+localStorage.setItem("highScorContainer", highScoreContainer);
 
 startBtn.addEventListener("click", start);
